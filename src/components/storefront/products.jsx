@@ -12,8 +12,8 @@ export default function Products() {
         </ImageListItem>
         <ImageListItem key={'Image1'}>
           <img
-            src={require('../../../TACP.png')}
-            srcSet={require('../../../TACP.png')}
+            src={'../../TACP.png'}
+            srcSet={'../../TACP.png'}
             alt={'TACP Logo'}
             loading="lazy"
           />

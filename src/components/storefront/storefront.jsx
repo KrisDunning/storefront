@@ -7,7 +7,7 @@ export default function Storefront() {
     <Box>
       <List>
         <Link href="#">Electronics</Link>
-        <Link href="#">Electronics</Link>
+        <Link href="#">Food</Link>
       </List>
     </Box>
 
