@@ -1,13 +1,16 @@
-
-import './App.css';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Storefront from './components/storefront/storefront';
+import Products from './components/storefront/products';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-      </header>
-    </div>
+    <>
+    <Header/>
+    <Storefront/>
+    <Products/>
+    <Footer/>
+    </>
   );
 }
 
