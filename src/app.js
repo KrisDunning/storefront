@@ -1,7 +1,7 @@
-import Header from './header/header';
-import Footer from './footer/footer';
-import Storefront from './storefront/storefront';
-import Products from './storefront/products';
+import Header from '../src/components/header/header';
+import Footer from '../src/components/footer/footer';
+import Storefront from '../src/components/storefront/storefront';
+import Products from '../src/components/storefront/products';
 
 function App() {
   return (
