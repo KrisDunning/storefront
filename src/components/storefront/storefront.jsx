@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Box, List, Link } from '@mui/material';
+import Categories from './categories';
+import Products from './products';
+
 
 export default function Storefront() {
 
   return (
-    <Box>
-      <List>
-        <Link href="#">Electronics</Link>
-        <Link href="#">Food</Link>
-      </List>
-    </Box>
-
+    <>
+    <Categories />
+    <Products />
+    </>
   )
 }
