@@ -1,11 +1,20 @@
 import * as React from 'react';
-import { Card, CardMedia, CardContent, CardActions, Typography, Button , Grid} from '@mui/material';
-import {addToCart, selectCategory} from '../../store/actions';
-import {connect} from 'react-redux';
+import { Card, CardMedia, CardContent, CardActions, Typography, Button, Grid } from '@mui/material';
+import { addToCart, selectCategory } from '../../store/actions';
+import { connect } from 'react-redux';
+import {useSelector} from 'react-redux';
+
+
+
 
 const Products = (props) => {
+  let activeCategory= useSelector(state => state.categories.activeCategory)
   console.log(props);
   return (
+    <>
+    <Typography variant="h3" component="div" align="center">
+      {activeCategory}
+    </Typography>
     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
     {props.products.map((product,index)=>(
     <Grid item xs={2} sm={4} md={4} key={`product-${index}`}>
@@ -14,7 +23,7 @@ const Products = (props) => {
       <CardMedia
         component="img"
         height="140"
-        image=""
+        src="/TACP.png"
         alt="TACP logo"
         />
       <CardContent>
@@ -29,7 +38,7 @@ const Products = (props) => {
         <Button size="small"
         onClick={()=>{
           console.log('Clicked');
-          addToCart(product);
+          props.addToCart(product);
         }}
         >Add to Cart</Button>
         <Button size="small">Learn More</Button>
@@ -38,15 +47,16 @@ const Products = (props) => {
     </Grid>
   ))}
 </Grid>
+  </>
   )
 }
 
-const mapStateToProps=(store)=>{
+const mapStateToProps = (store) => {
   return {
-    products:store.products,
+    products: store.products,
   }
 };
-const mapDispatchToProps={
+const mapDispatchToProps = {
   selectCategory,
   addToCart
 }

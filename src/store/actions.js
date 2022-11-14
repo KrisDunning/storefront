@@ -17,3 +17,4 @@ export const removeFromCart=(product)=>{
     payload:product
   }
 }
+

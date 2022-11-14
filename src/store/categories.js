@@ -7,15 +7,16 @@ const initialState = {
     {name:'food',
     displayName:'Food',description:'Delicious Delectables'},
   ],
+  activeCategory:""
 }
 
 //reducers
 
 function categoriesReducer(state=initialState,action){
-  console.log('action in categoriesReducer : ',action.type,action.payload);
   const{type,payload}=action;
   switch(type){
     case 'SELECT_CATEGORY':
+      console.log('Select Category Triggered : ',payload);
       return {
         ...state,
         activeCategory:payload

@@ -40,7 +40,6 @@ const initialState =
   // reducers
   function productsReducer(state=initialState,action){
     const{type,payload}=action;
-    console.log('action in productReducer : ',action);
     switch(type){
       case 'SELECT_CATEGORY':
         return initialState.filter(product=>product.category===payload);
